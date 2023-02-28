@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 from models import db
 app = Flask(__name__)
 
@@ -6,10 +6,13 @@ app = Flask(__name__)
 def welcome():
     return render_template("home.html", message="Message from flask file")
 
-@app.route("/questions")
-def questions_view():
-    questions_db = db[0]
-    return render_template("quiz.html", question=questions_db)
-
+@app.route("/questions/<int:index>")
+def questions_view(index):
+    try:
+        questions_db = db[index]
+        return render_template("quiz.html", question=questions_db)
+    except:
+        abort(404)
+    
 if __name__ == "__main__":
     app.run(debug=True)
