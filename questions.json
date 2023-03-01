@@ -12,10 +12,6 @@
         "answer": "Smell"
     },
     {
-        "question": " How many known species of birds are there?",
-        "answer": "10,000"
-    },
-    {
         "question": "What evolutionary adaptation helps birds fly?",
         "answer": "Rapid Digestion, Beaks & Hollow Bones"
     },
@@ -30,5 +26,9 @@
     {
         "question": "What do wolves use their scent for?",
         "answer": "Marking Territory"
+    },
+    {
+        "question": "Who is the king of the jungle",
+        "answer": "Lion"
     }
 ]

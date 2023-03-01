@@ -16,5 +16,18 @@
                 <p> {{question.answer}}</p>
             </div>
         </div>
+
+        <button>
+            {% if index < max_index %}
+            <a href='{{ url_for("questions_view", index=index+1) }}'>Next Question</a>
+            {% else %}
+            <a href='{{ url_for("questions_view", index=0) }}'>Start Over</a>
+            {% endif %}
+        </button>
+        <div class="links">
+            <a href="{{ url_for('welcome') }}">Home</a>
+      
+            <a href="{{ url_for('remove_question', index=index)}}">Remove This Question</a>
+          </div>
     </body>
 </html>
