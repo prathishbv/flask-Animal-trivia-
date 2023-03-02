@@ -6,11 +6,11 @@
         <title>Animal Trivia App</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/static/home.css">
     </head>
-    <body>
+    <body class='container'>
         <h1> Animal Trivia </h1>
-        <a href="{{ url_for('add_question')}}">Add a question</a>
+        <a href="{{ url_for('add_question')}}" class="new-question">Add a question</a>
         <ul>
             {% for question in questions %}
             <li> 
